@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------------------
 variable "apex_domain" {
   type        = string
-  default     = ""
+  default     = "graola-floral.com"
 }
 
 variable "subdomain" {
@@ -13,7 +13,7 @@ variable "subdomain" {
 
 variable "tls_email" {
   type        = string
-  default     = ""
+  default     = "vincenttoto@gmx.fr"
 }
 
 // ----------------------------------------------------------------------------
@@ -21,7 +21,7 @@ variable "tls_email" {
 // ----------------------------------------------------------------------------
 variable "enable_external_dns" {
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "create_and_configure_subdomain" {
@@ -31,10 +31,10 @@ variable "create_and_configure_subdomain" {
 
 variable "enable_tls" {
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "production_letsencrypt" {
   type        = bool
-  default     = false
+  default     = true
 }

@@ -4,13 +4,13 @@
 variable "region" {
   description = "The region to create the resources into"
   type        = string
-  default     = "us-east-1"
+  default     = "eu-west-3"
 }
 
 variable "cluster_name" {
   description = "Variable to provide your desired name for the cluster. The script will create a random name if this is empty"
   type        = string
-  default     = ""
+  default     = "floral"
 }
 
 variable "vault_user" {
@@ -49,7 +49,7 @@ variable "min_number_of_nodes" {
 variable "max_number_of_nodes" {
   description = "The maximum number of worker nodes to use for the cluster"
   type        = number
-  default     = 5
+  default     = 3
 }
 
 variable "worker_nodes_instance_types" {
@@ -85,7 +85,7 @@ variable "vpc_cidr_block" {
 variable "apex_domain" {
   description = "The main domain to either use directly or to configure a subdomain from"
   type        = string
-  default     = ""
+  default     = "graola-floral.com"
 }
 
 variable "subdomain" {
@@ -97,7 +97,7 @@ variable "subdomain" {
 variable "tls_email" {
   description = "The email to register the LetsEncrypt certificate with. Added to the `jx-requirements.yml` file"
   type        = string
-  default     = ""
+  default     = "vincenttoto@gmx.fr"
 }
 
 // ----------------------------------------------------------------------------
@@ -124,7 +124,7 @@ variable "enable_repository_storage" {
 variable "enable_external_dns" {
   description = "Flag to enable or disable External DNS in the final `jx-requirements.yml` file"
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "create_and_configure_subdomain" {
@@ -136,11 +136,11 @@ variable "create_and_configure_subdomain" {
 variable "enable_tls" {
   description = "Flag to enable TLS int he final `jx-requirements.yml` file"
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "production_letsencrypt" {
   description = "Flag to use the production environment of letsencrypt in the `jx-requirements.yml` file"
   type        = bool
-  default     = false
+  default     = true
 }

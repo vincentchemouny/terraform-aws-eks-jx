@@ -15,7 +15,7 @@ variable "min_number_of_nodes" {
 
 variable "max_number_of_nodes" {
   type        = number
-  default     = 5
+  default     = 3
 }
 
 variable "worker_nodes_instance_types" {
